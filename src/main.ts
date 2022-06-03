@@ -14,6 +14,11 @@ async function run(): Promise<void> {
     core.info(`the repo is ${owner}/${repo}`);
 
     const labels = ['test-label'];
+    core.info(`Labels ${labels}`);
+
+    const issueNumber = github.context.issue.number;
+
+    core.info(`issue ${issueNumber}`);
 
     await octokit.issues.addLabels({
       labels,
@@ -22,8 +27,6 @@ async function run(): Promise<void> {
       issue_number: github.context.issue.number,
     });
 
-
-    core.info(`Labels ${labels}`);
   } catch (error: any) {
     core.info(`[Action Query] Bugger`);
     core.setFailed(error.message);

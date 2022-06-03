@@ -8805,13 +8805,15 @@ function run() {
             core.info(`the REF is ${ref}`);
             core.info(`the repo is ${owner}/${repo}`);
             const labels = ['test-label'];
+            core.info(`Labels ${labels}`);
+            const issueNumber = github.context.issue.number;
+            core.info(`issue ${issueNumber}`);
             yield octokit.issues.addLabels({
                 labels,
                 owner,
                 repo,
                 issue_number: github.context.issue.number,
             });
-            core.info(`Labels ${labels}`);
         }
         catch (error) {
             core.info(`[Action Query] Bugger`);
