@@ -8808,9 +8808,9 @@ function run() {
             const labels = ['test-label'];
             core.info(`Labels ${labels}`);
             const issue = github.context.issue;
-            core.info(`issue ${issue}`);
+            console.log(`issue ${issue}`);
             const payload = github.context.payload;
-            core.info(`payload ${payload}`);
+            console.log(`payload ${payload}`);
             core.info(`payload number ${payload.number}`);
             yield octokit.issues.addLabels({
                 labels,
