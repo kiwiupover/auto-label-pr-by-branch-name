@@ -7,6 +7,10 @@ async function run(): Promise<void> {
     const token = core.getInput('token');
     const octokit = new Octokit({ auth: `token ${token}` });
 
+    const { owner, repo } = github.context.repo;
+
+    core.info(`the repo is ${owner}/${repo}`);
+
     const context = github.context;
     const username = context.actor;
 
