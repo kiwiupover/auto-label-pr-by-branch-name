@@ -3,7 +3,7 @@ name: Auto Label PR based on brach
 on: [push, pull_request]
 
 jobs:
-  ci:
+  auto-label:
     runs-on: ubuntu-latest
     steps:
       - name: checkout
