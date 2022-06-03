@@ -1,14 +1,13 @@
 {
-  "name": "action-ts-template",
+  "name": "Auto Label PR based on PR branch name",
   "private": true,
   "description": "A typescript template for rapid development of GitHub actions.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/actions-cool/action-ts-template",
+    "url": "https://github.com/kiwiupover/action-ts-template",
     "branch": "main"
   },
   "license": "MIT",
-  "author": "xrkffgg",
   "main": "src/main.ts",
   "scripts": {
     "build": "tsc",
