@@ -7,22 +7,23 @@ async function run(): Promise<void> {
     const token = core.getInput('token');
     const octokit = new Octokit({ auth: `token ${token}` });
 
-    const { owner, repo,  } = github.context.repo;
+    const { owner, repo } = github.context.repo;
     const ref = github.context.ref;
 
     core.info(`the REF is ${ref}`);
     core.info(`the repo is ${owner}/${repo}`);
 
-    const context = github.context;
-    const username = context.actor;
+    const labels = ['test-label'];
 
-    // This is a test
-    await octokit.users.getByUsername({
-      username,
+    await octokit.issues.addLabels({
+      labels,
+      owner,
+      repo,
+      issue_number: github.context.issue.number,
     });
 
-    core.info(`[Action Query] Query ${username} success!`);
-    core.info(`WOOT WOOT`);
+
+    core.info(`Labels ${labels}`);
   } catch (error: any) {
     core.info(`[Action Query] Bugger`);
     core.setFailed(error.message);

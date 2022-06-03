@@ -1,6 +1,6 @@
 name: Auto Label PR based on brach
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
   auto-label:

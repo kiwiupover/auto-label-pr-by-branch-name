@@ -1,16 +1,16 @@
-name: CI
+# name: CI
 
-on: [push, pull_request]
+# on: [push, pull_request]
 
-jobs:
-  ci:
-    runs-on: ubuntu-latest
-    steps:
-      - name: checkout
-        uses: actions/checkout@main
+# jobs:
+#   ci:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: checkout
+#         uses: actions/checkout@main
 
-      # - name: install
-      #   run: yarn install
+#       - name: install
+#         run: yarn install
 
-      # - name: all
-      #   run: yarn all
+#       - name: all
+#         run: yarn all
