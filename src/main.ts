@@ -16,9 +16,13 @@ async function run(): Promise<void> {
     const labels = ['test-label'];
     core.info(`Labels ${labels}`);
 
-    const issue = github.context.issue
-
+    const issue = github.context.issue;
     core.info(`issue ${issue}`);
+
+    const payload = github.context.payload;
+    core.info(`payload ${payload}`);
+
+    core.info(`payload number ${payload.number}`);
 
     await octokit.issues.addLabels({
       labels,

@@ -958,6 +958,7 @@ class Context {
 exports.Context = Context;
 //# sourceMappingURL=context.js.map
 
+
 /***/ }),
 
 /***/ 5438:
@@ -8808,6 +8809,9 @@ function run() {
             core.info(`Labels ${labels}`);
             const issue = github.context.issue;
             core.info(`issue ${issue}`);
+            const payload = github.context.payload;
+            core.info(`payload ${payload}`);
+            core.info(`payload number ${payload.number}`);
             yield octokit.issues.addLabels({
                 labels,
                 owner,
