@@ -1,0 +1,10 @@
+name: Auto Label
+
+on: [push, pull_request]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: kiwiupover/auto-label-pr-by-branch-name

@@ -5,7 +5,6 @@ import { Octokit } from '@octokit/rest';
 async function run(): Promise<void> {
   try {
     const token = core.getInput('token');
-    // API: https://actions-cool.github.io/octokit-rest/
     const octokit = new Octokit({ auth: `token ${token}` });
 
     const context = github.context;
@@ -17,7 +16,9 @@ async function run(): Promise<void> {
     });
 
     core.info(`[Action Query] Query ${username} success!`);
+    core.info(`WOOT WOOT`);
   } catch (error: any) {
+    core.info(`[Action Query] Bugger`);
     core.setFailed(error.message);
   }
 }
