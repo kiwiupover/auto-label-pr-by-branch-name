@@ -1,5 +1,5 @@
 {
-  "name": "Auto Label PR based on PR branch name",
+  "name": "auto-label-pr-based-on-pr-branch-name",
   "private": true,
   "description": "A typescript template for rapid development of GitHub actions.",
   "repository": {
