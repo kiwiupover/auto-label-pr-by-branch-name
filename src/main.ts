@@ -13,6 +13,9 @@ async function run(): Promise<void> {
     core.info(`the REF is ${ref}`);
     core.info(`the repo is ${owner}/${repo}`);
 
+    const number = core.getInput('number')
+    core.info(`number is ${number}`);
+
     const labels = ['test-label'];
     core.info(`Labels ${labels}`);
 
