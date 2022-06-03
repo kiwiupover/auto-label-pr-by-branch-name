@@ -8806,8 +8806,8 @@ function run() {
             core.info(`the repo is ${owner}/${repo}`);
             const labels = ['test-label'];
             core.info(`Labels ${labels}`);
-            const issueNumber = github.context.issue.number;
-            core.info(`issue ${issueNumber}`);
+            const issue = github.context.issue;
+            core.info(`issue ${issue}`);
             yield octokit.issues.addLabels({
                 labels,
                 owner,
