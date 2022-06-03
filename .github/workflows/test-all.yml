@@ -9,8 +9,8 @@ jobs:
       - name: checkout
         uses: actions/checkout@main
 
-      - name: install
-        run: yarn install
+      # - name: install
+      #   run: yarn install
 
-      - name: all
-        run: yarn all
+      # - name: all
+      #   run: yarn all
