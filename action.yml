@@ -1,11 +1,10 @@
 # https://docs.github.com/en/actions/creating-actions/metadata-syntax-for-github-actions
-name: 'Action TS Template'
-description: 'A typescript template for rapid development of GitHub actions.'
-author: 'xrkffgg'
+name: 'Auto label PR based on branch name'
+description: 'A GitHub action.'
+author: 'kiwiupover'
 
 branding:
-  # https://actions-cool.github.io/github-action-branding/
-  icon: 'file'
+  icon: 'PR'
   color: 'blue'
 
 inputs:
