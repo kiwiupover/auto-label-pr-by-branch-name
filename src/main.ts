@@ -17,10 +17,10 @@ async function run(): Promise<void> {
     core.info(`Labels ${labels}`);
 
     const issue = github.context.issue;
-    console.log(`issue ${issue}`);
+    console.table(`issue ${issue}`);
 
     const payload = github.context.payload;
-    console.log(`payload ${payload}`);
+    console.table(`payload ${payload}`);
 
     core.info(`payload number ${payload.number}`);
 
